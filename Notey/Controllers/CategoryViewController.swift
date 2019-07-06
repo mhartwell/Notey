@@ -14,10 +14,12 @@ class CategoryViewController: UITableViewController {
     var categories = [Category]()
     //declare our context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("\(paths)")
         loadCategories()
     }
     //MARK: - Table functions go here
@@ -34,15 +36,19 @@ class CategoryViewController: UITableViewController {
         return cell
     }
     //performs the segue to the notebooks view when the user selects a category
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "gotoNotebooks", sender: self)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("User selected a cell")
+        self.performSegue(withIdentifier: "goToNotebooks", sender: self)
     }
+    
     //MARK:- Segue function here
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationViewController = segue.destination as! NotebookViewController
         
         if let indexPath = tableView.indexPathForSelectedRow{
             destinationViewController.selectedCategory = categories[indexPath.row]
+        }else{
+            print("Error performing segue")
         }
     }
     //MARK:- Button Pressed Method
