@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		85BF201722CEDB9D00E1EEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF201622CEDB9D00E1EEDE /* AppDelegate.swift */; };
-		85BF201922CEDB9D00E1EEDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF201822CEDB9D00E1EEDE /* ViewController.swift */; };
+		85BF201922CEDB9D00E1EEDE /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF201822CEDB9D00E1EEDE /* CategoryViewController.swift */; };
 		85BF201C22CEDB9D00E1EEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BF201A22CEDB9D00E1EEDE /* Main.storyboard */; };
 		85BF201F22CEDB9D00E1EEDE /* Notey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85BF201D22CEDB9D00E1EEDE /* Notey.xcdatamodeld */; };
 		85BF202122CEDB9F00E1EEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BF202022CEDB9F00E1EEDE /* Assets.xcassets */; };
 		85BF202422CEDB9F00E1EEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BF202222CEDB9F00E1EEDE /* LaunchScreen.storyboard */; };
+		85BF202E22CFBF8E00E1EEDE /* NotebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF202D22CFBF8E00E1EEDE /* NotebookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85BF201322CEDB9D00E1EEDE /* Notey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BF201622CEDB9D00E1EEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85BF201822CEDB9D00E1EEDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85BF201822CEDB9D00E1EEDE /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		85BF201B22CEDB9D00E1EEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85BF201E22CEDB9D00E1EEDE /* Notey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notey.xcdatamodel; sourceTree = "<group>"; };
 		85BF202022CEDB9F00E1EEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85BF202322CEDB9F00E1EEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85BF202522CEDB9F00E1EEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85BF202D22CFBF8E00E1EEDE /* NotebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		85BF201522CEDB9D00E1EEDE /* Notey */ = {
 			isa = PBXGroup;
 			children = (
-				85BF201622CEDB9D00E1EEDE /* AppDelegate.swift */,
-				85BF201822CEDB9D00E1EEDE /* ViewController.swift */,
-				85BF201A22CEDB9D00E1EEDE /* Main.storyboard */,
+				85BF202C22CEDBE100E1EEDE /* Controllers */,
+				85BF202B22CEDBD400E1EEDE /* Views */,
 				85BF202022CEDB9F00E1EEDE /* Assets.xcassets */,
-				85BF202222CEDB9F00E1EEDE /* LaunchScreen.storyboard */,
 				85BF202522CEDB9F00E1EEDE /* Info.plist */,
 				85BF201D22CEDB9D00E1EEDE /* Notey.xcdatamodeld */,
 			);
 			path = Notey;
+			sourceTree = "<group>";
+		};
+		85BF202B22CEDBD400E1EEDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85BF202222CEDB9F00E1EEDE /* LaunchScreen.storyboard */,
+				85BF201A22CEDB9D00E1EEDE /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85BF202C22CEDBE100E1EEDE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85BF201622CEDB9D00E1EEDE /* AppDelegate.swift */,
+				85BF201822CEDB9D00E1EEDE /* CategoryViewController.swift */,
+				85BF202D22CFBF8E00E1EEDE /* NotebookViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BF201922CEDB9D00E1EEDE /* ViewController.swift in Sources */,
+				85BF201922CEDB9D00E1EEDE /* CategoryViewController.swift in Sources */,
 				85BF201722CEDB9D00E1EEDE /* AppDelegate.swift in Sources */,
 				85BF201F22CEDB9D00E1EEDE /* Notey.xcdatamodeld in Sources */,
+				85BF202E22CFBF8E00E1EEDE /* NotebookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
